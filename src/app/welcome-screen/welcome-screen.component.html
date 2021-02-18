@@ -1,7 +1,67 @@
-<p>welcome-screen works!</p>
+<div 
+  class="container"
+>
+    <mat-card
+        class="card"
+    >
+    <h2>
+        CHOOSE YOUR OPPONENT
+    </h2>
+<div 
+  class="form-check 
+         chooseOpponent"
+>
+
+    <!-- Template Variable #checker Opponents -->
+    <mat-selection-list 
+        #checkerOpponents 
+        [multiple]="false"
+    >
+        <mat-list-option 
+            *ngFor="let opponent of opponents" 
+            [value]="opponent.name"
+            (click)="setOpponentChosen(opponent.name)"
+        >
+            {{opponent.name}}
+        </mat-list-option>
+    </mat-selection-list>
+
+    <p>
+        Option selected: {{checkerOpponents.selectedOptions.selected[0]?.value}}
+    </p>
+</div>
+
+<br><br>
+
+<div
+  class="opponentInput"
+>
+
+  <mat-form-field>
+    <mat-label>
+        Enter new Opponent
+    </mat-label>
+    <input 
+      matInput placeholder="Ex. Charles Schultz" 
+      [(ngModel)]="nameInTextInput"
+    >
+  </mat-form-field>
+  
+    <button 
+      mat-raised-button color="primary"
+      (click)="addOpponent(); clearInputText()"
+      class="newOpponentButton"
+    >
+      Add Opponent
+    </button>
+</div> 
 
 <button
-    routerLink="/stats"
+  mat-raised-button color="warn"
+  class="goToStats"
+  routerLink="/stats"
 >
-    Go To Stats
+  Game Stats
 </button>
+</mat-card>
+</div>
