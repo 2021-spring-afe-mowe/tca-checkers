@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { SharedDataService } from '../shared-data.service';
 
 export interface Opponents {
-  name: string,
-  isChecked: boolean
+  name: string
 }
 
 export interface Games {
-  opponent: string,
+  opponentName: string,
   won: boolean,
   lost: boolean
 }
@@ -37,12 +36,10 @@ export class WelcomeScreenComponent implements OnInit {
 
     this.opponents = [
       {
-        name: 'Sherman',
-        isChecked: false
+        name: 'Sherman'
       },
       {
-        name: 'Tina',
-        isChecked: false
+        name: 'Tina'
       }
     ];
 
