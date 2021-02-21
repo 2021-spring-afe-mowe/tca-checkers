@@ -1,15 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedDataService } from '../shared-data.service';
-
-interface Opponents {
-  name: string
-}
-
-interface Games {
-  opponentName: string,
-  won: boolean,
-  lost: boolean
-}
+import { SharedDataService, Opponents } from '../shared-data.service';
 
 @Component({
   selector: 'app-welcome-screen',
