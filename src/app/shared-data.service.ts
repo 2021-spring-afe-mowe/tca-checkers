@@ -16,11 +16,44 @@ export interface Games {
 })
 export class SharedDataService {
 
-  //variable to display who player chose to play
+  //variable to display who player chose to play, used on stats screen, set on welcome screen
   playerTwo: string;
+
+  //array to hold oppoents
+  opponents: Opponents[] = [];
 
   constructor() { }
 
+  //Welcome Screen Logic //mockup some data
+    getOpponents(): Opponents[] {
+
+      this.opponents = [
+        {
+          name: 'Sherman'
+        },
+        {
+          name: 'Tina'
+        }
+      ];
+  
+      console.log(this.opponents);
+    
+      return this.opponents
+    }
+
+    addOpponent(nameInTextInput) {
+      console.log("Hello from addOpponent " + nameInTextInput);
+      const newOpponent = {
+        name: nameInTextInput
+      };
+  
+      this.opponents = [
+        ...this.opponents,
+        newOpponent
+      ];
+    }
+
+  //Stats Screen Logic
   setPlayerTwo(opponentChosen: string) {
       this.playerTwo = opponentChosen;
   }
