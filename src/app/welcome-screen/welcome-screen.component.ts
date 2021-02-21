@@ -19,7 +19,6 @@ export class WelcomeScreenComponent implements OnInit {
   }
 
   addNewOpponent() {
-    console.log("Hello from addOpponent " + this.nameInTextInput);
     const newOpponent = {
       name: this.nameInTextInput
     };
