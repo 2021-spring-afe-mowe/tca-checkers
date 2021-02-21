@@ -17,9 +17,6 @@ export interface Games {
   styleUrls: ['./welcome-screen.component.css']
 })
 export class WelcomeScreenComponent implements OnInit {
-  title = 'estimating';
-
-  opponentChosen = "";
 
   nameInTextInput = "";
 
@@ -51,8 +48,7 @@ export class WelcomeScreenComponent implements OnInit {
   addOpponent() {
 
     const newOpponent = {
-      name: this.nameInTextInput,
-      isChecked: false
+      name: this.nameInTextInput
     };
 
     this.opponents = [
@@ -65,13 +61,9 @@ export class WelcomeScreenComponent implements OnInit {
     this.nameInTextInput = ' ';
   }
 
-  //set the value of chosen opponent
+  //set the value for chosen opponent
   selectPlayerTwo(playerTwo: string) {
     this.sharedDataSvc.setPlayerTwo(playerTwo);
     console.log(playerTwo);
   }
-  // setOpponentChosen(foeChosen:string) {
-  //   this.opponentChosen = foeChosen;
-  //   console.log(this.opponentChosen);
-  // }
 }
