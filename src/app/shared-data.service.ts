@@ -15,7 +15,16 @@ export interface Games {
 })
 export class SharedDataService {
 
-  newOpponent: string;
+  //variable to display who player chose to play
+  playerTwo: string;
 
   constructor() { }
+
+  setPlayerTwo(opponentChosen: string) {
+      this.playerTwo = opponentChosen;
+  }
+
+  getPlayerTwo() {
+    return this.playerTwo;
+  }
 }

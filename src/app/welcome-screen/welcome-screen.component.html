@@ -20,7 +20,7 @@
             <mat-list-option 
                 *ngFor="let opponent of opponents" 
                 [value]="opponent.name"
-                (click)="setOpponentChosen(opponent.name)"
+                (click)="selectPlayerTwo(opponent.name)"
             >
                 {{opponent.name}}
             </mat-list-option>

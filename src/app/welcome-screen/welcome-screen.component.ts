@@ -65,8 +65,13 @@ export class WelcomeScreenComponent implements OnInit {
     this.nameInTextInput = ' ';
   }
 
-  setOpponentChosen(foeChosen:string) {
-    this.opponentChosen = foeChosen;
-    console.log(this.opponentChosen);
+  //set the value of chosen opponent
+  selectPlayerTwo(playerTwo: string) {
+    this.sharedDataSvc.setPlayerTwo(playerTwo);
+    console.log(playerTwo);
   }
+  // setOpponentChosen(foeChosen:string) {
+  //   this.opponentChosen = foeChosen;
+  //   console.log(this.opponentChosen);
+  // }
 }

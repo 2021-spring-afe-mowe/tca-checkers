@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-stats-screen',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatsScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedDataSvc: SharedDataService) { }
 
+  //Get the games array here to display on view
   ngOnInit(): void {
   }
+
+  playerTwo = this.sharedDataSvc.getPlayerTwo();
 
 }
