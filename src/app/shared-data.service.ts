@@ -41,18 +41,7 @@ export class SharedDataService {
       return this.opponents
     }
 
-    addOpponent(nameInTextInput) {
-      console.log("Hello from addOpponent " + nameInTextInput);
-      const newOpponent = {
-        name: nameInTextInput
-      };
-  
-      this.opponents = [
-        ...this.opponents,
-        newOpponent
-      ];
-    }
-
+    
   //Stats Screen Logic
   setPlayerTwo(opponentChosen: string) {
       this.playerTwo = opponentChosen;

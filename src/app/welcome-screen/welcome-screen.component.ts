@@ -29,7 +29,15 @@ export class WelcomeScreenComponent implements OnInit {
   }
 
   addNewOpponent() {
-    this.sharedDataSvc.addOpponent(this.nameInTextInput);
+    console.log("Hello from addOpponent " + this.nameInTextInput);
+    const newOpponent = {
+      name: this.nameInTextInput
+    };
+
+    this.opponents = [
+      ...this.opponents,
+      newOpponent
+    ];
   }
 
   clearInputText() {
