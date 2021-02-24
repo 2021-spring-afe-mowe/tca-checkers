@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 
 export interface Opponents {
-  name: string
+  name: string;
 }
 
 export interface Games {
   //opponentName maybe an array of opponent names???
-  opponentName: string
-  won: boolean
+  opponentName: string;
+  result: boolean;
 }
 
 @Injectable({
