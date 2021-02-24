@@ -7,7 +7,7 @@ export interface Opponents {
 export interface Games {
   //opponentName maybe an array of opponent names???
   opponentName: string;
-  result: boolean;
+  result: string;
 }
 
 @Injectable({
