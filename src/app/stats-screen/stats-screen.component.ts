@@ -15,7 +15,7 @@ export class StatsScreenComponent implements OnInit {
   //Variables for Results
   numberOfWins: number;
   numberOfLosses: number;
-  //numberOfDraws: number;
+  numberOfDraws: number;
   //numberOfQuits: number;
 
   constructor(private sharedDataSvc: SharedDataService) { }
@@ -58,8 +58,10 @@ export class StatsScreenComponent implements OnInit {
     //Get number of wins from games vs player2
     resultsForGames.filter(x => this.numberOfWins = x.wins);
     resultsForGames.filter(x => this.numberOfLosses = x.losses);
+    resultsForGames.filter(x => this.numberOfDraws = x.draws);
 
     console.log(this.numberOfWins);
     console.log(this.numberOfLosses);
+    console.log(this.numberOfDraws);
   }
 }
