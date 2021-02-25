@@ -14,7 +14,7 @@ export class StatsScreenComponent implements OnInit {
 
   //Variables for Results
   numberOfWins: number;
-  //numberOfLosses: number;
+  numberOfLosses: number;
   //numberOfDraws: number;
   //numberOfQuits: number;
 
@@ -54,5 +54,12 @@ export class StatsScreenComponent implements OnInit {
     const resultsForGames = shapeForByPlayerStats.filter(x => x.opponentName == this.playerTwo);
 
     console.log(resultsForGames);
+
+    //Get number of wins from games vs player2
+    resultsForGames.filter(x => this.numberOfWins = x.wins);
+    resultsForGames.filter(x => this.numberOfLosses = x.losses);
+
+    console.log(this.numberOfWins);
+    console.log(this.numberOfLosses);
   }
 }
