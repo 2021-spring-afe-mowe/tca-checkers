@@ -21,6 +21,9 @@ export class SharedDataService {
   //array to hold oppoents
   opponents: Opponents[] = [];
 
+  //array to hold game data
+  checkerGames: Games[] = [];
+
   constructor() { }
 
   //Welcome Screen Logic //mockup some data
@@ -40,6 +43,47 @@ export class SharedDataService {
       return this.opponents
     }
 
+    getGamesData() {
+      this.checkerGames = [
+        {
+          opponentName: "Sherman"
+          , result: "L"
+      }
+      , {
+          opponentName: "Sherman"
+          , result: "D"
+      }
+      , {
+          opponentName: "Sherman"
+          , result: "W"
+      }
+      , {
+          opponentName: "Sherman"
+          , result: "L"
+      }
+      , {
+          opponentName: "Sherman"
+          , result: "Q"
+      }
+      , {
+          opponentName: "Sherman"
+          , result: "W"
+      }
+      , {
+          opponentName: "Tina"
+          , result: "L"
+      } 
+      , {
+          opponentName: "Tina"
+          , result: "Q"
+      }
+      , {
+          opponentName: "Tina"
+          , result: "Q"
+      }
+  
+      ];
+    }
     
   //Stats Screen Logic
   setPlayerTwo(opponentChosen: string) {
