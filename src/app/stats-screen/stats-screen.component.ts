@@ -12,6 +12,12 @@ export class StatsScreenComponent implements OnInit {
   groupByOpponnentName: any;
   shapeForByPlayerStats: any;
 
+  //Variables for Results
+  numberOfWins: number;
+  //numberOfLosses: number;
+  //numberOfDraws: number;
+  //numberOfQuits: number;
+
   constructor(private sharedDataSvc: SharedDataService) { }
 
   //Get the games array here to display on view
@@ -41,5 +47,12 @@ export class StatsScreenComponent implements OnInit {
     }));
 
     console.log(shapeForByPlayerStats);
+
+    
+    //Use a filter on shapeForByPlayerStats to find player2 name 
+        //and get necessary information??????
+    const resultsForGames = shapeForByPlayerStats.filter(x => x.opponentName == this.playerTwo);
+
+    console.log(resultsForGames);
   }
 }
