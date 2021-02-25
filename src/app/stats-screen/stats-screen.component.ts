@@ -55,6 +55,8 @@ export class StatsScreenComponent implements OnInit {
 
     console.log(resultsForGames);
 
+    //Logic for when a user views stats vs a new player not yet in the DB
+
     //Get number of wins from games vs player2
     resultsForGames.filter(x => this.numberOfWins = x.wins);
     resultsForGames.filter(x => this.numberOfLosses = x.losses);
