@@ -83,6 +83,8 @@ export class SharedDataService {
       }
   
       ];
+
+      return this.checkerGames;
     }
     
   //Stats Screen Logic
