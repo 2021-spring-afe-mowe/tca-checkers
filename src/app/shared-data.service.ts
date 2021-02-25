@@ -26,7 +26,7 @@ export class SharedDataService {
 
   constructor() { }
 
-  //Welcome Screen Logic //mockup some data
+  //Welcome Screen Mock Data
     getOpponents(): Opponents[] {
 
       this.opponents = [
@@ -43,6 +43,7 @@ export class SharedDataService {
       return this.opponents
     }
 
+    //Stats screen Mock Data
     getGamesData() {
       this.checkerGames = [
         {
