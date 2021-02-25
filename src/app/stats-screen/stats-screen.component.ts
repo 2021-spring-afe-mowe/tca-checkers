@@ -40,6 +40,6 @@ export class StatsScreenComponent implements OnInit {
       , quit: x[1].filter(y => y.result == "Q").length
     }));
 
-  console.log(shapeForByPlayerStats);
-}
+    console.log(shapeForByPlayerStats);
+  }
 }

@@ -6,6 +6,7 @@ import { SharedDataService, Opponents } from '../shared-data.service';
   templateUrl: './welcome-screen.component.html',
   styleUrls: ['./welcome-screen.component.css']
 })
+
 export class WelcomeScreenComponent implements OnInit {
 
   nameInTextInput = "";
