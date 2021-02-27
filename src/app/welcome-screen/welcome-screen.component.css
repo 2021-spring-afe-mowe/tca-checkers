@@ -1,13 +1,10 @@
-/* body {
-    background-image: url("images/grungyCheckers.jpg");
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-position: center;
-} 
-*/
-
 h2{
     text-align: center;
+    font-family: 'Exo', sans-serif;
+}
+
+mat-list-option {
+    font-family: 'Exo', sans-serif;
 }
 
 .card {
@@ -16,11 +13,6 @@ h2{
     padding: 4em;
     width: 80%;
 }
-/* .chooseOpponent {
-    border: 2px solid black;
-    margin: 0 auto;
-    width: 50%;
-} */
 
 .opponentNameButton{
     margin-bottom: 10px;
@@ -28,12 +20,15 @@ h2{
 
 .opponentInput {
     margin-bottom: 20px;
+    font-family: 'Exo', sans-serif;
 }
 
 .newOpponentButton {
     padding-left: 20px;
+    font-family: 'Exo', sans-serif;
 }
 
 .goToStats {
     color: white;
+    font-family: 'Exo', sans-serif;
 }
