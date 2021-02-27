@@ -1,16 +1,14 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 h2{
     text-align: center;
 }
 
-.container {
-    padding: 20px;
-}
-
 .card {
-    border: 2px solid Black;
+    /* border: 2px solid Black; */
     margin: 0 auto;
     padding: 4em;
-    width: 60%;
+    width: 80%;
 }
 /* .chooseOpponent {
     border: 2px solid black;

@@ -1,64 +1,50 @@
-<div 
-  class="container"
->
-    <mat-card
-        class="card"
-    >
-        <h2>
-            SELECT PLAYER 2
-        </h2>
-        <div 
-            class="form-check 
-                   chooseOpponent"
-        >
+<!DOCTYPE html>
+<html lang="en">
 
-            <!-- Template Variable #checker Opponents -->
-            <mat-selection-list 
-                #checkerOpponents 
-                [multiple]="false"
-            >
-            <mat-list-option 
-                *ngFor="let opponent of opponents" 
-                [value]="opponent.name"
-                (click)="selectPlayerTwo(opponent.name)"
-            >
-                {{opponent.name}}
-            </mat-list-option>
-            </mat-selection-list>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
-        </div>
+<body>
+  <mat-card class="card">
+    <h2>
+      SELECT PLAYER 2
+    </h2>
+    <div class="form-check chooseOpponent">
 
-        <br><br>
+      <!-- Template Variable #checker Opponents -->
+      <mat-selection-list #checkerOpponents [multiple]="false">
+        <mat-list-option *ngFor="let opponent of opponents" [value]="opponent.name"
+          (click)="selectPlayerTwo(opponent.name)">
+          {{opponent.name}}
+          <mat-divider></mat-divider>
+        </mat-list-option>
+      </mat-selection-list>
+    </div>
 
-        <div
-            class="opponentInput"
-        >
+    <br><br>
 
-            <mat-form-field>
-                <mat-label>
-                    Enter new Opponent
-                </mat-label>
-                <input 
-                    matInput placeholder="Ex. Charles Schultz" 
-                    [(ngModel)]="nameInTextInput"
-                >
-            </mat-form-field>
-  
-            <button 
-                mat-raised-button color="primary"
-                (click)="addNewOpponent(); clearInputText()"
-                class="newOpponentButton"
-            >
-                Add Opponent
-            </button>
-        </div> 
+    <div class="opponentInput">
 
-        <button
-            mat-raised-button color="warn"
-            class="goToStats"
-            routerLink="/stats"
-        >
-            Game Stats
-        </button>
-    </mat-card>
-</div>
+      <mat-form-field>
+        <mat-label>
+          Enter new Opponent
+        </mat-label>
+        <input matInput placeholder="Ex. Charles Schultz" [(ngModel)]="nameInTextInput">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="addNewOpponent(); clearInputText()" class="newOpponentButton">
+        Add Opponent
+      </button>
+    </div>
+
+    <button mat-raised-button color="warn" class="goToStats" routerLink="/stats">
+      Game Stats
+    </button>
+  </mat-card>
+</body>
+
+</html>
