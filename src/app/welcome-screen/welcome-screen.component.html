@@ -28,23 +28,29 @@
 
     <br><br>
 
-    <div class="opponentInput">
-
-      <mat-form-field>
-        <mat-label>
-          Enter new Opponent
-        </mat-label>
-        <input matInput placeholder="Ex. Charles Schultz" [(ngModel)]="nameInTextInput">
-      </mat-form-field>
-
-      <button mat-raised-button color="primary" (click)="addNewOpponent(); clearInputText()" class="newOpponentButton">
-        Add Opponent
-      </button>
-    </div>
-
     <button mat-raised-button color="warn" class="goToStats" routerLink="/stats">
       Game Stats
     </button>
+
+    <br><br>
+
+    <div class="opponentInput">
+      <span class="inputButton">
+        <mat-form-field>
+          <mat-label>
+            Enter new Opponent
+          </mat-label>
+          <input matInput placeholder="Ex. Charles Schultz" [(ngModel)]="nameInTextInput">
+        </mat-form-field>
+
+        <br><br>
+
+        <button mat-raised-button color="primary" (click)="addNewOpponent(); clearInputText()"
+          class="newOpponentButton">
+          Add Opponent
+        </button>
+      </span>
+    </div>
   </mat-card>
 </body>
 

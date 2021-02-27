@@ -1,6 +1,7 @@
 h2{
     text-align: center;
     font-family: 'Exo', sans-serif;
+    font-weight: bold;
 }
 
 mat-list-option {
@@ -10,9 +11,13 @@ mat-list-option {
 .card {
     /* border: 2px solid Black; */
     margin: 0 auto;
-    padding: 4em;
-    width: 80%;
+    padding: 2em;
+    width: 85%;
+    position:fixed;
+    min-height:100%;
+    max-height:100%;
 }
+
 
 .opponentNameButton{
     margin-bottom: 10px;
@@ -23,12 +28,18 @@ mat-list-option {
     font-family: 'Exo', sans-serif;
 }
 
+.inputButton {
+    display: flex;
+    flex-direction: row;
+}
+
 .newOpponentButton {
-    padding-left: 20px;
+    margin-left: 10px;
     font-family: 'Exo', sans-serif;
 }
 
 .goToStats {
     color: white;
     font-family: 'Exo', sans-serif;
+    margin-bottom: 20px;
 }
