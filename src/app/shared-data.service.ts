@@ -54,6 +54,10 @@ export class SharedDataService {
           , result: "D"
       }
       , {
+        opponentName: "Sherman"
+        , result: "L"
+      }
+      , {
           opponentName: "Sherman"
           , result: "W"
       }

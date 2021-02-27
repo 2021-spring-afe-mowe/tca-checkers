@@ -1,9 +1,37 @@
-<div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div>
     <h1>Stats VS {{ playerTwo }}</h1>
 
-    <h3>Number of Wins VS {{ playerTwo }}: {{ numberOfWins }}</h3>
+    <mat-list role="list">
+      <mat-list-item role="listitem">Number of Wins VS {{ playerTwo }}: {{ numberOfWins }}</mat-list-item>
+      <mat-divider></mat-divider>
 
-    <h3>Number of Losses VS {{ playerTwo }}: {{ numberOfLosses }}</h3>
+      <mat-list-item role="listitem">Number of Losses VS {{ playerTwo }}: {{ numberOfLosses }}</mat-list-item>
+      <mat-divider></mat-divider>
 
-    <h3>Number of Draws VS {{ playerTwo }}: {{ numberOfDraws }}</h3>
-</div>
+      <mat-list-item role="listitem">Number of Draws VS {{ playerTwo }}: {{ numberOfDraws }}</mat-list-item>
+    </mat-list>
+
+    <br><br>
+
+    <button 
+      mat-raised-button color="primary"
+      routerLink="/game"
+    >
+      Play Game
+    </button>
+  </div>
+</body>
+
+</html>

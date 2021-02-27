@@ -1,1 +1,8 @@
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+body {
+    padding: 10%;
+}
+
+h1 {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+}
