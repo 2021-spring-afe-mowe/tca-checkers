@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  align-content: space-between;
+  /* align-content: space-between; */
 }
 
 .button {
   width: 60%;
-  /* margin-top: 25%; */
+  margin-top: 20%;
   padding: 20px;
   font-size: 28px;
   font-weight: bold;
