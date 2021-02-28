@@ -102,15 +102,15 @@ export class SharedDataService {
 
   //Game Screen
   addNewWinningGame(playerTwo) {
-    const newGame = {
-      opponentName: playerTwo,
-      result: "W"
-    };
-    console.log(newGame.result);
-    console.log(playerTwo);
-    this.checkerGames = [
-      ...this.checkerGames,
-      newGame
-    ];
+    // const newGame = {
+    //   opponentName: playerTwo,
+    //   result: "W"
+    // };
+    // console.log(newGame.result);
+    // console.log(playerTwo);
+    // this.checkerGames = [
+    //   ...this.checkerGames,
+    //   newGame
+    // ];
   }
 }

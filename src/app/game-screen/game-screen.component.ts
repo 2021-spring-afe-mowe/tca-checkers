@@ -10,27 +10,29 @@ export class GameScreenComponent implements OnInit {
 
   checkerGame: Games[] = [];
 
-  constructor(private sharedDataSvc: SharedDataService) { }
+  constructor(private sharedDataSvc: SharedDataService) { 
+    this.checkerGame = sharedDataSvc.getGamesData();
+  }
 
   ngOnInit(): void {
-    //Get the games so I can add new games to array of games objects
-    this.checkerGame = this.sharedDataSvc.getGamesData();
   }
+
+  //Get the games so I can add new games to array of games objects
 
   playerTwo = this.sharedDataSvc.getPlayerTwo();
 
   addNewWinningGame() {
     this.sharedDataSvc.addNewWinningGame(this.playerTwo);
-    // const newGame = {
-    //   opponentName: this.playerTwo,
-    //   result: "W"
-    // };
+    const newGame = {
+      opponentName: this.playerTwo,
+      result: "W"
+    };
     // console.log(newGame.result);
     // console.log(this.playerTwo);
-    // this.checkerGame = [
-    //   ...this.checkerGame,
-    //   newGame
-    // ];
+    this.checkerGame = [
+      ...this.checkerGame,
+      newGame
+    ];
+    console.log(this.checkerGame);
   }
-
 }
