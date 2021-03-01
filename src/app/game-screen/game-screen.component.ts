@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedDataService, Games } from '../shared-data.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-game-screen',
@@ -8,13 +9,16 @@ import { SharedDataService, Games } from '../shared-data.service';
 })
 export class GameScreenComponent implements OnInit {
 
+  //Dialog Box
+  // dialog: MatDialog;
+
   checkerGame: Games[] = [];
 
-  constructor(private sharedDataSvc: SharedDataService) { 
-    this.checkerGame = sharedDataSvc.getGamesData();
-  }
+  //Tried to inject dialog into constructor, was getting promise error???
+  constructor(private sharedDataSvc: SharedDataService) {}
 
   ngOnInit(): void {
+    this.checkerGame = this.sharedDataSvc.getGamesData();
   }
 
   //Get the games so I can add new games to array of games objects
@@ -22,17 +26,26 @@ export class GameScreenComponent implements OnInit {
   playerTwo = this.sharedDataSvc.getPlayerTwo();
 
   addNewWinningGame() {
-    this.sharedDataSvc.addNewWinningGame(this.playerTwo);
     const newGame = {
       opponentName: this.playerTwo,
       result: "W"
     };
-    // console.log(newGame.result);
-    // console.log(this.playerTwo);
     this.checkerGame = [
       ...this.checkerGame,
       newGame
     ];
     console.log(this.checkerGame);
   }
+
+  //Dialog Screen for when player clicks on win
+  // openDialog() {
+  //   this.dialog.open(WinningDialogElement);
+  // }
 }
+
+  // //Get the winning dialog content
+  // @Component({
+  //   selector: 'winning-dialog-element',
+  //   templateUrl: 'winning-dialog-element.html',
+  // })
+  // export class WinningDialogElement {}

@@ -12,21 +12,23 @@ export class StatsScreenComponent implements OnInit {
   groupByOpponnentName: any;
   shapeForByPlayerStats: any;
 
-  //Variables for Results
+  //Variables for Game Results
   numberOfWins: number;
   numberOfLosses: number;
   numberOfDraws: number;
   //numberOfQuits: number;
+  //numberOfGamesPlayed;
 
-  constructor(private sharedDataSvc: SharedDataService) { }
+  //Variable For Opponent
+  playerTwo = this.sharedDataSvc.getPlayerTwo();
+
+  constructor(private sharedDataSvc: SharedDataService) {}
 
   //Get the games array here to display on view
   ngOnInit(): void {
     this.checkerGames = this.sharedDataSvc.getGamesData();
     this.shapeData();
   }
-
-  playerTwo = this.sharedDataSvc.getPlayerTwo();
 
   shapeData() {
     // Group by...
