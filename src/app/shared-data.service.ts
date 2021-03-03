@@ -21,88 +21,86 @@ export class SharedDataService {
   opponents: Opponents[] = [];
 
   //array to hold game data
-  checkerGames: Games[] = 
+  checkerGames: Games[] =
     [
       {
         opponentName: "Sherman"
         , result: "L"
-    }
-    , {
+      }
+      , {
         opponentName: "Sherman"
         , result: "D"
-    }
-    , {
-      opponentName: "Sherman"
-      , result: "W"
-    }
-    , {
-        opponentName: "Sherman"
-        , result: "L"
-    }
-    , {
-        opponentName: "Sherman"
-        , result: "L"
-    }
-    , {
-        opponentName: "Sherman"
-        , result: "Q"
-    }
-    , {
+      }
+      , {
         opponentName: "Sherman"
         , result: "W"
-    }
-    , {
+      }
+      , {
+        opponentName: "Sherman"
+        , result: "L"
+      }
+      , {
+        opponentName: "Sherman"
+        , result: "L"
+      }
+      , {
+        opponentName: "Sherman"
+        , result: "Q"
+      }
+      , {
+        opponentName: "Sherman"
+        , result: "W"
+      }
+      , {
         opponentName: "Tina"
         , result: "L"
-    } 
-    , {
+      }
+      , {
         opponentName: "Tina"
         , result: "Q"
-    }
-    , {
+      }
+      , {
         opponentName: "Tina"
         , result: "Q"
-    }
+      }
 
     ];
 
   constructor() { }
 
   //Welcome Screen Mock Data
-    getOpponents(): Opponents[] {
+  getOpponents(): Opponents[] {
 
-      this.opponents = [
-        {
-          name: 'Sherman'
-        },
-        {
-          name: 'Tina'
-        }
-      ];
-  
-      console.log(this.opponents);
-    
-      return this.opponents
-    }
+    this.opponents = [
+      {
+        name: 'Sherman'
+      },
+      {
+        name: 'Tina'
+      }
+    ];
 
-    //Stats screen Mock Data
-    getGamesData() {
+    console.log(this.opponents);
 
+    return this.opponents
+  }
 
-      return this.checkerGames;
-    }
+  //Stats screen Mock Data
+  getGamesData() {
+    return this.checkerGames;
+  }
 
-    addGameData(newResult: Games) {
-      console.log(newResult);
-      this.checkerGames = [
-        ...this.checkerGames,
-        newResult
-      ] 
-    }
-    
+  addGameData(newResult: Games) {
+    console.log(newResult);
+    this.checkerGames = [
+      ...this.checkerGames,
+      newResult
+    ]
+  }
+
   //Stats Screen Logic
   setPlayerTwo(opponentChosen: string) {
-      this.playerTwo = opponentChosen;
+    this.playerTwo = opponentChosen;
   }
 
   getPlayerTwo() {
