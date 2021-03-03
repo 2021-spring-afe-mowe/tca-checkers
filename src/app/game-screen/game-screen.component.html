@@ -25,6 +25,7 @@
         mat-raised-button 
         color="accent" 
         class="button"
+        (click)="addNewLosingGame()"
     >
       LOST
     </button>
@@ -32,6 +33,7 @@
     <button 
         mat-button 
         class="button draw"
+        (click)="addNewDrawGame()"
     >
       DRAW
     </button>

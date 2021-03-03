@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedDataService, Games } from '../shared-data.service';
-import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-game-screen',
@@ -8,9 +7,6 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./game-screen.component.css']
 })
 export class GameScreenComponent implements OnInit {
-
-  //Dialog Box
-  // dialog: MatDialog;
 
   checkerGame: Games[] = [];
 
@@ -31,6 +27,8 @@ export class GameScreenComponent implements OnInit {
       result: "W"
     };
     this.sharedDataSvc.addGameData(newGame);
+
+    //COULD DO THE WORK OF ADDING RESULT HERE INSTEAD OF CALLING METHOD IN SERVICE??
     // this.checkerGame = [
     //   ...this.checkerGame,
     //   newGame
@@ -38,15 +36,21 @@ export class GameScreenComponent implements OnInit {
     console.log(this.sharedDataSvc.getGamesData());
   }
 
-  //Dialog Screen for when player clicks on win
-  // openDialog() {
-  //   this.dialog.open(WinningDialogElement);
-  // }
-}
+  addNewLosingGame() {
+    const newGame = {
+      opponentName: this.playerTwo,
+      result: "L"
+    };
+    this.sharedDataSvc.addGameData(newGame);
+    console.log(this.sharedDataSvc.getGamesData());
+  }
 
-  // //Get the winning dialog content
-  // @Component({
-  //   selector: 'winning-dialog-element',
-  //   templateUrl: 'winning-dialog-element.html',
-  // })
-  // export class WinningDialogElement {}
+  addNewDrawGame() {
+    const newGame = {
+      opponentName: this.playerTwo,
+      result: "D"
+    };
+    this.sharedDataSvc.addGameData(newGame);
+    console.log(this.sharedDataSvc.getGamesData());
+  }
+}
