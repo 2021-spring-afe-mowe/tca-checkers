@@ -14,7 +14,8 @@ export interface Games {
 })
 export class SharedDataService {
 
-  //variable to display who player chose to play, used on stats screen, set on welcome screen
+  //variable to display who player chose to play, 
+      //used on stats screen, set on welcome screen
   playerTwo: string;
 
   //array to hold oppoents
@@ -90,6 +91,7 @@ export class SharedDataService {
     return this.checkerGames;
   }
 
+  //Called on Games Screen when user "W", "L", or "D"...Displays results on stats-screen
   addGameData(newResult: Games) {
     console.log(newResult);
     this.checkerGames = [
