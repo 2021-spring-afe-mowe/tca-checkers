@@ -30,11 +30,12 @@ export class GameScreenComponent implements OnInit {
       opponentName: this.playerTwo,
       result: "W"
     };
-    this.checkerGame = [
-      ...this.checkerGame,
-      newGame
-    ];
-    console.log(this.checkerGame);
+    this.sharedDataSvc.addGameData(newGame);
+    // this.checkerGame = [
+    //   ...this.checkerGame,
+    //   newGame
+    // ];
+    console.log(this.sharedDataSvc.getGamesData());
   }
 
   //Dialog Screen for when player clicks on win

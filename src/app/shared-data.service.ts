@@ -21,7 +21,50 @@ export class SharedDataService {
   opponents: Opponents[] = [];
 
   //array to hold game data
-  checkerGames: Games[] = [];
+  checkerGames: Games[] = 
+    [
+      {
+        opponentName: "Sherman"
+        , result: "L"
+    }
+    , {
+        opponentName: "Sherman"
+        , result: "D"
+    }
+    , {
+      opponentName: "Sherman"
+      , result: "W"
+    }
+    , {
+        opponentName: "Sherman"
+        , result: "L"
+    }
+    , {
+        opponentName: "Sherman"
+        , result: "L"
+    }
+    , {
+        opponentName: "Sherman"
+        , result: "Q"
+    }
+    , {
+        opponentName: "Sherman"
+        , result: "W"
+    }
+    , {
+        opponentName: "Tina"
+        , result: "L"
+    } 
+    , {
+        opponentName: "Tina"
+        , result: "Q"
+    }
+    , {
+        opponentName: "Tina"
+        , result: "Q"
+    }
+
+    ];
 
   constructor() { }
 
@@ -44,51 +87,17 @@ export class SharedDataService {
 
     //Stats screen Mock Data
     getGamesData() {
-      this.checkerGames = [
-        {
-          opponentName: "Sherman"
-          , result: "L"
-      }
-      , {
-          opponentName: "Sherman"
-          , result: "D"
-      }
-      , {
-        opponentName: "Sherman"
-        , result: "W"
-      }
-      , {
-          opponentName: "Sherman"
-          , result: "L"
-      }
-      , {
-          opponentName: "Sherman"
-          , result: "L"
-      }
-      , {
-          opponentName: "Sherman"
-          , result: "Q"
-      }
-      , {
-          opponentName: "Sherman"
-          , result: "W"
-      }
-      , {
-          opponentName: "Tina"
-          , result: "L"
-      } 
-      , {
-          opponentName: "Tina"
-          , result: "Q"
-      }
-      , {
-          opponentName: "Tina"
-          , result: "Q"
-      }
-  
-      ];
+
 
       return this.checkerGames;
+    }
+
+    addGameData(newResult: Games) {
+      console.log(newResult);
+      this.checkerGames = [
+        ...this.checkerGames,
+        newResult
+      ] 
     }
     
   //Stats Screen Logic
