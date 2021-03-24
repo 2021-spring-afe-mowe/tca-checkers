@@ -61,4 +61,15 @@ export class GameScreenComponent implements OnInit {
     this.sharedDataSvc.addGameData(newGame);
     console.log(this.sharedDataSvc.getGamesData());
   }
+
+  addNewQuitGame() {
+    // this.bottomSheet.open(PlayAgainComponent);
+    
+    const newGame = {
+      opponentName: this.playerTwo,
+      result: "Q"
+    };
+    this.sharedDataSvc.addGameData(newGame);
+    console.log(this.sharedDataSvc.getGamesData());
+  }
 }

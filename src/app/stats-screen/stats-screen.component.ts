@@ -17,7 +17,7 @@ export class StatsScreenComponent implements OnInit {
   numberOfLosses: number;
   numberOfDraws: number;
   numberOfGames: number;
-  //numberOfQuits: number;
+  numberOfQuits: number;
   //numberOfGamesPlayed;
 
   //Variable For Opponent
@@ -46,7 +46,7 @@ export class StatsScreenComponent implements OnInit {
       , wins: x[1].filter(y => y.result == "W").length
       , losses: x[1].filter(y => y.result == "L").length
       , draws: x[1].filter(y => y.result == "D").length
-      , quit: x[1].filter(y => y.result == "Q").length
+      , quits: x[1].filter(y => y.result == "Q").length
     }));
 
     console.log(shapeForByPlayerStats);
@@ -63,6 +63,7 @@ export class StatsScreenComponent implements OnInit {
     resultsForGames.filter(x => this.numberOfWins = x.wins);
     resultsForGames.filter(x => this.numberOfLosses = x.losses);
     resultsForGames.filter(x => this.numberOfDraws = x.draws);
+    resultsForGames.filter(x => this.numberOfQuits = x.quits);
     resultsForGames.filter(x => this.numberOfGames = x.numberOfGames);
   }
 }
