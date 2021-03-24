@@ -19,7 +19,15 @@ export class SharedDataService {
   playerTwo: string;
 
   //array to hold oppoents
-  opponents: Opponents[] = [];
+  opponents: Opponents[] = 
+  [
+    {
+      name: 'Sherman'
+    },
+    {
+      name: 'Tina'
+    }
+  ];
 
   //array to hold game data
   checkerGames: Games[] =
@@ -71,18 +79,7 @@ export class SharedDataService {
 
   //Welcome Screen Mock Data
   getOpponents(): Opponents[] {
-
-    this.opponents = [
-      {
-        name: 'Sherman'
-      },
-      {
-        name: 'Tina'
-      }
-    ];
-
-    console.log(this.opponents);
-
+    // console.log(this.opponents);
     return this.opponents
   }
 

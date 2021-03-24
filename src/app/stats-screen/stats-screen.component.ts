@@ -16,6 +16,7 @@ export class StatsScreenComponent implements OnInit {
   numberOfWins: number;
   numberOfLosses: number;
   numberOfDraws: number;
+  numberOfGames: number;
   //numberOfQuits: number;
   //numberOfGamesPlayed;
 
@@ -51,21 +52,17 @@ export class StatsScreenComponent implements OnInit {
     console.log(shapeForByPlayerStats);
 
     
-    //Use a filter on shapeForByPlayerStats to find player2 name 
-        //and get necessary information??????
+    //Use a filter on shapeForByPlayerStats to find opponent name 
+        //and get necessary opponent information??????
     const resultsForGames = shapeForByPlayerStats.filter(x => x.opponentName == this.playerTwo);
 
-    console.log(resultsForGames);
+    //Logic for when a user views stats vs a new player not yet in the DB, don't want it
+        //To be blank
 
-    //Logic for when a user views stats vs a new player not yet in the DB
-
-    //Get number of wins from games vs player2
+    //Get number of wins, losses, and draws from games vs opponent
     resultsForGames.filter(x => this.numberOfWins = x.wins);
     resultsForGames.filter(x => this.numberOfLosses = x.losses);
     resultsForGames.filter(x => this.numberOfDraws = x.draws);
-
-    console.log(this.numberOfWins);
-    console.log(this.numberOfLosses);
-    console.log(this.numberOfDraws);
+    resultsForGames.filter(x => this.numberOfGames = x.numberOfGames);
   }
 }
