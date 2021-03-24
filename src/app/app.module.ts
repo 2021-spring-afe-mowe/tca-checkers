@@ -14,13 +14,17 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { PlayAgainComponent } from './play-again/play-again.component';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeScreenComponent,
     StatsScreenComponent,
-    GameScreenComponent
+    GameScreenComponent,
+    PlayAgainComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCheckboxModule,
     MatListModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSnackBarModule,
+    MatBottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]

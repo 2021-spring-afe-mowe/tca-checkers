@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedDataService, Games } from '../shared-data.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { PlayAgainComponent } from '../play-again/play-again.component';
 
 @Component({
   selector: 'app-game-screen',
@@ -11,7 +13,7 @@ export class GameScreenComponent implements OnInit {
   checkerGame: Games[] = [];
 
   //Tried to inject dialog into constructor, was getting promise error???
-  constructor(private sharedDataSvc: SharedDataService) {}
+  constructor(private sharedDataSvc: SharedDataService, private bottomSheet: MatBottomSheet) {}
 
   ngOnInit(): void {
     this.checkerGame = this.sharedDataSvc.getGamesData();
@@ -22,6 +24,8 @@ export class GameScreenComponent implements OnInit {
   playerTwo = this.sharedDataSvc.getPlayerTwo();
 
   addNewWinningGame() {
+    this.bottomSheet.open(PlayAgainComponent);
+    
     const newGame = {
       opponentName: this.playerTwo,
       result: "W"
