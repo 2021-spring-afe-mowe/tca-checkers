@@ -41,6 +41,8 @@ export class GameScreenComponent implements OnInit {
   }
 
   addNewLosingGame() {
+    this.bottomSheet.open(PlayAgainComponent);
+
     const newGame = {
       opponentName: this.playerTwo,
       result: "L"
@@ -50,6 +52,8 @@ export class GameScreenComponent implements OnInit {
   }
 
   addNewDrawGame() {
+    this.bottomSheet.open(PlayAgainComponent);
+    
     const newGame = {
       opponentName: this.playerTwo,
       result: "D"
