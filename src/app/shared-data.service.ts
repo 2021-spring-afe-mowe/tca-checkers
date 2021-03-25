@@ -79,7 +79,6 @@ export class SharedDataService {
 
   //Welcome Screen Mock Data
   getOpponents() {
-    // console.log(this.opponents);
     return this.opponents;
   }
 
@@ -97,6 +96,7 @@ export class SharedDataService {
     ]
   }
 
+  //called on Welcome Screen when you add another opponent
   addOpponent(newOpponent: Opponents) {
     console.log(newOpponent);
     this.opponents = [

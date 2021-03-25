@@ -12,7 +12,6 @@ export class GameScreenComponent implements OnInit {
 
   checkerGame: Games[] = [];
 
-  //Tried to inject dialog into constructor, was getting promise error???
   constructor(private sharedDataSvc: SharedDataService, private bottomSheet: MatBottomSheet) {}
 
   ngOnInit(): void {
@@ -29,13 +28,7 @@ export class GameScreenComponent implements OnInit {
       result: "W"
     };
     this.sharedDataSvc.addGameData(newGame);
-
-    //COULD DO THE WORK OF ADDING RESULT HERE INSTEAD OF CALLING METHOD IN SERVICE??
-    // this.checkerGame = [
-    //   ...this.checkerGame,
-    //   newGame
-    // ];
-    console.log(this.sharedDataSvc.getGamesData());
+    // console.log(this.sharedDataSvc.getGamesData());
   }
 
   addNewLosingGame() {
@@ -46,7 +39,7 @@ export class GameScreenComponent implements OnInit {
       result: "L"
     };
     this.sharedDataSvc.addGameData(newGame);
-    console.log(this.sharedDataSvc.getGamesData());
+    // console.log(this.sharedDataSvc.getGamesData());
   }
 
   addNewDrawGame() {
@@ -57,7 +50,7 @@ export class GameScreenComponent implements OnInit {
       result: "D"
     };
     this.sharedDataSvc.addGameData(newGame);
-    console.log(this.sharedDataSvc.getGamesData());
+    // console.log(this.sharedDataSvc.getGamesData());
   }
 
   addNewQuitGame() {
@@ -66,6 +59,6 @@ export class GameScreenComponent implements OnInit {
       result: "Q"
     };
     this.sharedDataSvc.addGameData(newGame);
-    console.log(this.sharedDataSvc.getGamesData());
+    // console.log(this.sharedDataSvc.getGamesData());
   }
 }

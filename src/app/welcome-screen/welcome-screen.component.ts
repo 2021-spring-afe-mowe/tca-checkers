@@ -23,13 +23,13 @@ export class WelcomeScreenComponent implements OnInit {
     const newOpponent = {
       name: this.nameInTextInput
     };
-    // this.sharedDataSvc.addOpponent(newOpponent);
+    this.sharedDataSvc.addOpponent(newOpponent);
 
     // console.log(this.sharedDataSvc.getOpponents());
-    this.opponents = [
-      ...this.opponents,
-      newOpponent
-    ];
+    // this.opponents = [
+    //   ...this.opponents,
+    //   newOpponent
+    //];
   }
 
   clearInputText() {
