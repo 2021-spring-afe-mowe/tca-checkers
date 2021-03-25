@@ -24,6 +24,8 @@ export class WelcomeScreenComponent implements OnInit {
       name: this.nameInTextInput
     };
 
+    this.sharedDataSvc.addNewOpponent(newOpponent);
+
     this.opponents = [
       ...this.opponents,
       newOpponent

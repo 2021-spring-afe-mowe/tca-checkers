@@ -78,7 +78,7 @@ export class SharedDataService {
   constructor() { }
 
   //Welcome Screen Mock Data
-  getOpponents(): Opponents[] {
+  getOpponents() {
     // console.log(this.opponents);
     return this.opponents
   }
@@ -94,6 +94,14 @@ export class SharedDataService {
     this.checkerGames = [
       ...this.checkerGames,
       newResult
+    ]
+  }
+
+  addNewOpponent(newOpponent: Opponents) {
+    console.log(newOpponent);
+    this.opponents = [
+      ...this.opponents,
+      newOpponent
     ]
   }
 

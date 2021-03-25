@@ -63,8 +63,6 @@ export class GameScreenComponent implements OnInit {
   }
 
   addNewQuitGame() {
-    // this.bottomSheet.open(PlayAgainComponent);
-    
     const newGame = {
       opponentName: this.playerTwo,
       result: "Q"
