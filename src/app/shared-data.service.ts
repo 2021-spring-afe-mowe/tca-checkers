@@ -80,7 +80,7 @@ export class SharedDataService {
   //Welcome Screen Mock Data
   getOpponents() {
     // console.log(this.opponents);
-    return this.opponents
+    return this.opponents;
   }
 
   //Stats screen Mock Data
@@ -97,7 +97,7 @@ export class SharedDataService {
     ]
   }
 
-  addNewOpponent(newOpponent: Opponents) {
+  addOpponent(newOpponent: Opponents) {
     console.log(newOpponent);
     this.opponents = [
       ...this.opponents,

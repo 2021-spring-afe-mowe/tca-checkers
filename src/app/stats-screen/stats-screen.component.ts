@@ -18,7 +18,6 @@ export class StatsScreenComponent implements OnInit {
   numberOfDraws: number;
   numberOfGames: number;
   numberOfQuits: number;
-  //numberOfGamesPlayed;
 
   //Variable For Opponent
   playerTwo = this.sharedDataSvc.getPlayerTwo();

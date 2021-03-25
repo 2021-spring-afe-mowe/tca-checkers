@@ -19,8 +19,6 @@ export class GameScreenComponent implements OnInit {
     this.checkerGame = this.sharedDataSvc.getGamesData();
   }
 
-  //Get the games so I can add new games to array of games objects
-
   playerTwo = this.sharedDataSvc.getPlayerTwo();
 
   addNewWinningGame() {
