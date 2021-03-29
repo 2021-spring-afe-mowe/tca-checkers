@@ -11,12 +11,14 @@ export class WelcomeScreenComponent implements OnInit {
 
   nameInTextInput = "";
 
-  opponents: Opponents[] = [];
+  get opponents(): Opponents[] {
+    return this.sharedDataSvc.getOpponents();
+  }
 
   constructor(private sharedDataSvc: SharedDataService) {}
 
   ngOnInit() {
-    this.opponents = this.sharedDataSvc.getOpponents();
+    // this.opponents = this.sharedDataSvc.getOpponents();
   }
 
   addNewOpponent() {
