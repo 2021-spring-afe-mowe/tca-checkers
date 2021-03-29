@@ -11,6 +11,8 @@ export class WelcomeScreenComponent implements OnInit {
 
   nameInTextInput = "";
 
+  //Everytime there is a change to opponents, called and updated on screen.
+      //Tied to ngFor on welcome screen
   get opponents(): Opponents[] {
     return this.sharedDataSvc.getOpponents();
   }
@@ -26,12 +28,6 @@ export class WelcomeScreenComponent implements OnInit {
       name: this.nameInTextInput
     };
     this.sharedDataSvc.addOpponent(newOpponent);
-
-    // console.log(this.sharedDataSvc.getOpponents());
-    // this.opponents = [
-    //   ...this.opponents,
-    //   newOpponent
-    //];
   }
 
   clearInputText() {
