@@ -13,6 +13,8 @@ export class WelcomeScreenComponent implements OnInit {
 
   //Everytime there is a change to opponents, called and updated on screen.
       //Tied to ngFor on welcome screen
+
+  //Wasn't using updated opponents on the screen.  Only initialized value in ngOnInit
   get opponents(): Opponents[] {
     return this.sharedDataSvc.getOpponents();
   }
