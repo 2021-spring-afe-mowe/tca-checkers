@@ -11,19 +11,21 @@
 
 <body class="font">
 
-    <div>
+    <div
+      class="imageCotainer"
+    >
       <img 
         src="../assets/images/checkers2.jpeg" 
         alt="Checkerboard"
-        width="200"
-        height="120"
+        class="checkersImage"
       >
     </div>
-  
-    <h1 class="mat-h1">
-      SELECT PLAYER 2
-    </h1>
+
     <div class="form-check chooseOpponent">
+
+      <h1 class="mat-h1">
+        SELECT PLAYER 2
+      </h1>
 
       <!-- Template Variable #checker Opponents -->
       <mat-selection-list #checkerOpponents [multiple]="false">
