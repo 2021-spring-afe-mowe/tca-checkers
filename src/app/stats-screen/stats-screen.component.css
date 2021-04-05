@@ -10,3 +10,8 @@ h1 {
 button {
     font-family: 'Exo', sans-serif;
 }
+
+.statsButtons{
+    display: flex;
+    justify-content: space-around;
+}
