@@ -42,15 +42,45 @@
     <div
       *ngIf="!toggleOn"
     >
-      <p>
-        Hello From hidden element
-      </p>
+      <h1>Stats VS {{ playerTwo }}</h1>
+
+      <mat-list role="list">
+        <mat-list-item role="listitem">Number of Wins VS {{ playerTwo }}: {{ numberOfWins }}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item role="listitem">Number of Losses VS {{ playerTwo }}: {{ numberOfLosses }}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item role="listitem">Number of Draws VS {{ playerTwo }}: {{ numberOfDraws }}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item role="listitem">Number of Quits VS {{ playerTwo }}: {{ numberOfQuits }}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item role="listitem">Total Games Played VS {{ playerTwo }}: {{ numberOfGames }}</mat-list-item>
+
+      </mat-list>
+
+      <br><br>
+
+      <div
+        class="statsButtons"
+      >
+        <button 
+          mat-raised-button 
+          color="primary"
+          routerLink="/game"
+        >
+          Play Game
+        </button>
+      </div>
     </div>
 
     <br><br>
 
     <button 
-      mat-raised-button color="accent" 
+      mat-raised-button 
+      color="accent" 
       class="goToStats" 
       routerLink="/stats"
     >
