@@ -106,7 +106,5 @@ export class WelcomeScreenComponent implements OnInit {
     resultsForGames.filter(x => this.numberOfDraws = x.draws);
     resultsForGames.filter(x => this.numberOfQuits = x.quits);
     resultsForGames.filter(x => this.numberOfGames = x.numberOfGames);
-
-    console.log(this.playerTwo);
   }
 }
