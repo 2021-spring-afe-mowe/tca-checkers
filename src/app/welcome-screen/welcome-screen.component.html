@@ -68,11 +68,19 @@
       >
         <button 
           mat-raised-button 
-          color="primary"
+          color="accent"
           routerLink="/game"
         >
           Play Game
         </button>
+
+        <button 
+        mat-raised-button 
+        color="background"
+        (click)="clicked=false"
+      >
+        Close Stats
+      </button>
       </div>
     </div>
 

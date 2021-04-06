@@ -43,8 +43,8 @@ mat-list-option {
     font-family: 'Exo', sans-serif;
 }
 
-.goToStats {
-    color: white;
-    font-family: 'Exo', sans-serif;
-    margin-bottom: 25%;
+.statsButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
 }

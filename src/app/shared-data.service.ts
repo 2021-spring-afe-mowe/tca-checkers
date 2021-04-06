@@ -77,12 +77,12 @@ export class SharedDataService {
 
   constructor() { }
 
-  //Welcome Screen Mock Data
+  //Welcome Screen Mock Opponent Data
   getOpponents() {
     return this.opponents;
   }
 
-  //Stats screen Mock Data
+  //Welcome screen Mock Game Data
   getGamesData() {
     return this.checkerGames;
   }
@@ -105,11 +105,10 @@ export class SharedDataService {
     ]
   }
 
-  //DON'T NEED IF I'M CONSOLIDATING WELCOME AND STATS
-  //Stats Screen Logic
-  // setPlayerTwo(opponentChosen: string) {
-  //   this.playerTwo = opponentChosen;
-  // }
+  //SET PLAYER TWO FOR GAMES SCREEN
+  setPlayerTwo(opponentChosen: string) {
+    this.playerTwo = opponentChosen;
+  }
 
   getPlayerTwo() {
     return this.playerTwo;

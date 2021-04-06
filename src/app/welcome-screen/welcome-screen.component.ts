@@ -60,7 +60,9 @@ export class WelcomeScreenComponent implements OnInit {
   //set the value for chosen opponent
   selectPlayerTwo(playerTwo: string) {
     this.playerTwo = playerTwo;
-    console.log(playerTwo);
+
+    //set player two for games screen
+    this.sharedDataSvc.setPlayerTwo(playerTwo);
   }
 
   getPlayerTwo() {
