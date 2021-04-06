@@ -12,7 +12,12 @@ export class WelcomeScreenComponent implements OnInit {
   nameInTextInput = "";
 
   //For *ngIf
+  clicked = false;
   toggleOn;
+
+  //Variable For Opponent
+  // playerTwo = this.sharedDataSvc.getPlayerTwo();
+  playerTwo = this.getPlayerTwo();
 
   //variable for stats
   checkerGames: Games[] = [];
@@ -36,15 +41,9 @@ export class WelcomeScreenComponent implements OnInit {
 
   constructor(private sharedDataSvc: SharedDataService) {}
 
-  //Variable For Opponent
-  // playerTwo = this.sharedDataSvc.getPlayerTwo();
-  playerTwo = "";
-
   //Get the games array here to display on view
   ngOnInit() {
-    // this.opponents = this.sharedDataSvc.getOpponents();
     this.checkerGames = this.sharedDataSvc.getGamesData();
-    this.shapeData();
   }
 
   addNewOpponent() {
@@ -60,9 +59,12 @@ export class WelcomeScreenComponent implements OnInit {
 
   //set the value for chosen opponent
   selectPlayerTwo(playerTwo: string) {
-    // this.sharedDataSvc.setPlayerTwo(playerTwo);
     this.playerTwo = playerTwo;
     console.log(playerTwo);
+  }
+
+  getPlayerTwo() {
+    return this.playerTwo;
   }
 
   //method for game stats
@@ -91,6 +93,8 @@ export class WelcomeScreenComponent implements OnInit {
         //and get necessary opponent information??????
     const resultsForGames = shapeForByPlayerStats.filter(x => x.opponentName == this.playerTwo);
 
+    console.log(this.playerTwo);
+
     //Logic for when a user views stats vs a new player not yet in the DB, don't want it
         //To be blank
 
@@ -100,5 +104,7 @@ export class WelcomeScreenComponent implements OnInit {
     resultsForGames.filter(x => this.numberOfDraws = x.draws);
     resultsForGames.filter(x => this.numberOfQuits = x.quits);
     resultsForGames.filter(x => this.numberOfGames = x.numberOfGames);
+
+    console.log(this.playerTwo);
   }
 }

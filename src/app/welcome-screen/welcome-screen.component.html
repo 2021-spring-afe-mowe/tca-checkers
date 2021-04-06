@@ -30,7 +30,7 @@
       <!-- Template Variable #checker Opponents -->
       <mat-selection-list #checkerOpponents [multiple]="false">
         <mat-list-option *ngFor="let opponent of opponents" [value]="opponent.name"
-          (click)="selectPlayerTwo(opponent.name);toggleOn =!toggleOn">
+          (click)="selectPlayerTwo(opponent.name);shapeData();clicked = true">
           {{opponent.name}}
           <mat-divider></mat-divider>
         </mat-list-option>
@@ -40,7 +40,7 @@
     <br><br>
 
     <div
-      *ngIf="!toggleOn"
+      *ngIf="clicked"
     >
       <h1>Stats VS {{ playerTwo }}</h1>
 
@@ -75,17 +75,6 @@
         </button>
       </div>
     </div>
-
-    <br><br>
-
-    <button 
-      mat-raised-button 
-      color="accent" 
-      class="goToStats" 
-      routerLink="/stats"
-    >
-      Game Stats
-    </button>
 
     <br><br>
 

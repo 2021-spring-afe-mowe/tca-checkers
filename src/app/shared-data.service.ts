@@ -105,10 +105,11 @@ export class SharedDataService {
     ]
   }
 
+  //DON'T NEED IF I'M CONSOLIDATING WELCOME AND STATS
   //Stats Screen Logic
-  setPlayerTwo(opponentChosen: string) {
-    this.playerTwo = opponentChosen;
-  }
+  // setPlayerTwo(opponentChosen: string) {
+  //   this.playerTwo = opponentChosen;
+  // }
 
   getPlayerTwo() {
     return this.playerTwo;
