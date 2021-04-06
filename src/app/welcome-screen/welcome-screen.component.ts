@@ -11,6 +11,9 @@ export class WelcomeScreenComponent implements OnInit {
 
   nameInTextInput = "";
 
+  clicked = false;
+  toggleOn;
+
   //Everytime there is a change to opponents, called and updated on screen.
       //Tied to ngFor on welcome screen
 

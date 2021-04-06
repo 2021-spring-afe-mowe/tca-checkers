@@ -30,11 +30,21 @@
       <!-- Template Variable #checker Opponents -->
       <mat-selection-list #checkerOpponents [multiple]="false">
         <mat-list-option *ngFor="let opponent of opponents" [value]="opponent.name"
-          (click)="selectPlayerTwo(opponent.name)">
+          (click)="selectPlayerTwo(opponent.name);toggleOn =!toggleOn">
           {{opponent.name}}
           <mat-divider></mat-divider>
         </mat-list-option>
       </mat-selection-list>
+    </div>
+
+    <br><br>
+
+    <div
+      *ngIf="!toggleOn"
+    >
+      <p>
+        Hello From hidden element
+      </p>
     </div>
 
     <br><br>

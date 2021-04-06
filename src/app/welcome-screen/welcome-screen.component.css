@@ -24,16 +24,6 @@ mat-list-option {
     object-fit: cover;
 }
 
-/* .card {
-    margin: 0 auto;
-    padding: 2em;
-    width: 85%;
-    position:fixed;
-    min-height:100%;
-    max-height:100%;
-} */
-
-
 .opponentNameButton{
     margin-bottom: 10px;
 }
