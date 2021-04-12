@@ -63,6 +63,10 @@ export class WelcomeScreenComponent implements OnInit {
 
     //set player two for games screen
     this.sharedDataSvc.setPlayerTwo(playerTwo);
+
+    this.shapeData();
+    
+    this.clicked = true;
   }
 
   getPlayerTwo() {
@@ -77,7 +81,7 @@ export class WelcomeScreenComponent implements OnInit {
         , new Map()
     );
 
-    console.log([...groupByOpponnentName]);
+    console.log("I am Here three", [...groupByOpponnentName]);
 
     const shapeForByPlayerStats = [...groupByOpponnentName].map(x => ({
       opponentName: x[0]
@@ -88,23 +92,27 @@ export class WelcomeScreenComponent implements OnInit {
       , quits: x[1].filter(y => y.result == "Q").length
     }));
 
-    console.log(shapeForByPlayerStats);
+    console.log("I am here too" , shapeForByPlayerStats);
 
     
     //Use a filter on shapeForByPlayerStats to find opponent name 
         //and get necessary opponent information??????
     const resultsForGames = shapeForByPlayerStats.filter(x => x.opponentName == this.playerTwo);
 
-    console.log(this.playerTwo);
+    console.log("I'm here " , this.playerTwo, resultsForGames, "ooh");
 
     //Logic for when a user views stats vs a new player not yet in the DB, don't want it
         //To be blank
 
     //Get number of wins, losses, and draws from games vs opponent
-    resultsForGames.filter(x => this.numberOfWins = x.wins);
-    resultsForGames.filter(x => this.numberOfLosses = x.losses);
-    resultsForGames.filter(x => this.numberOfDraws = x.draws);
-    resultsForGames.filter(x => this.numberOfQuits = x.quits);
-    resultsForGames.filter(x => this.numberOfGames = x.numberOfGames);
+    this.numberOfWins = (resultsForGames ? (resultsForGames as any)[0].wins : 0);
+
+    this.numberOfLosses = (resultsForGames ? (resultsForGames as any)[0].losses : 0);
+
+    // resultsForGames.filter(x => this.numberOfWins = x.wins);
+    // resultsForGames.filter(x => this.numberOfLosses = x.losses);
+    // resultsForGames.filter(x => this.numberOfDraws = x.draws);
+    // resultsForGames.filter(x => this.numberOfQuits = x.quits);
+    // resultsForGames.filter(x => this.numberOfGames = x.numberOfGames);
   }
 }

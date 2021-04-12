@@ -28,9 +28,10 @@
       </h1>
 
       <!-- Template Variable #checker Opponents -->
+      <!-- three method calls in click could be one method call  -->
       <mat-selection-list #checkerOpponents [multiple]="false">
         <mat-list-option *ngFor="let opponent of opponents" [value]="opponent.name"
-          (click)="selectPlayerTwo(opponent.name);shapeData();clicked = true">
+          (click)="selectPlayerTwo(opponent.name)">
           {{opponent.name}}
           <mat-divider></mat-divider>
         </mat-list-option>
