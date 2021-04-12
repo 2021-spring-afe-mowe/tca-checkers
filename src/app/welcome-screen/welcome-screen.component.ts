@@ -101,18 +101,11 @@ export class WelcomeScreenComponent implements OnInit {
 
     console.log("I'm here " , this.playerTwo, resultsForGames, "ooh");
 
-    //Logic for when a user views stats vs a new player not yet in the DB, don't want it
-        //To be blank
-
     //Get number of wins, losses, and draws from games vs opponent
     this.numberOfWins = resultsForGames.length > 0 ? resultsForGames[0].wins : 0;
-
-    // this.numberOfLosses = (resultsForGames ? (resultsForGames as any)[0].losses : 0);
-
-    // resultsForGames.filter(x => this.numberOfWins = x.wins);
-    // resultsForGames.filter(x => this.numberOfLosses = x.losses);
-    // resultsForGames.filter(x => this.numberOfDraws = x.draws);
-    // resultsForGames.filter(x => this.numberOfQuits = x.quits);
-    // resultsForGames.filter(x => this.numberOfGames = x.numberOfGames);
+    this.numberOfLosses = resultsForGames.length > 0 ? resultsForGames[0].losses : 0;
+    this.numberOfDraws = resultsForGames.length > 0 ? resultsForGames[0].draws : 0;
+    this.numberOfQuits = resultsForGames.length > 0 ? resultsForGames[0].quits : 0;
+    this.numberOfGames = resultsForGames.length > 0 ? resultsForGames[0].numberOfGames : 0;
   }
 }
