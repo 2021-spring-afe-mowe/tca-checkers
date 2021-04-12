@@ -105,9 +105,9 @@ export class WelcomeScreenComponent implements OnInit {
         //To be blank
 
     //Get number of wins, losses, and draws from games vs opponent
-    this.numberOfWins = (resultsForGames ? (resultsForGames as any)[0].wins : 0);
+    this.numberOfWins = resultsForGames.length > 0 ? resultsForGames[0].wins : 0;
 
-    this.numberOfLosses = (resultsForGames ? (resultsForGames as any)[0].losses : 0);
+    // this.numberOfLosses = (resultsForGames ? (resultsForGames as any)[0].losses : 0);
 
     // resultsForGames.filter(x => this.numberOfWins = x.wins);
     // resultsForGames.filter(x => this.numberOfLosses = x.losses);
