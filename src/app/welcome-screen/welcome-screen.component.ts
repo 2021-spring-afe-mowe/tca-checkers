@@ -111,7 +111,7 @@ export class WelcomeScreenComponent implements OnInit {
     this.numberOfQuits = resultsForGames.length > 0 ? resultsForGames[0].quits : 0;
     this.numberOfGames = resultsForGames.length > 0 ? resultsForGames[0].numberOfGames : 0;
 
-    this.winPercentage = resultsForGames.length > 0 ? Math.round((resultsForGames[0].wins / resultsForGames[0].numberOfGames) * (100)) : "Haven't Played a Game Yet";
-    this.lossPercentage = resultsForGames.length > 0 ? Math.round((resultsForGames[0].losses / resultsForGames[0].numberOfGames) * (100)) : "Haven't Played a Game Yet";
+    this.winPercentage = resultsForGames.length > 0 ? Math.round((resultsForGames[0].wins / resultsForGames[0].numberOfGames) * (100)) : 0;
+    this.lossPercentage = resultsForGames.length > 0 ? Math.round((resultsForGames[0].losses / resultsForGames[0].numberOfGames) * (100)) : 0;
   }
 }
